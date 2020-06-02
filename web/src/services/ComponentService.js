@@ -1,10 +1,11 @@
 const axios = require('axios');
+const {host} = require('../http');
 
 module.exports = {
     async create(data) {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/component";
+                const url = host + "/component";
                 await axios
                     .post(url, data)
                     .then(res => {
@@ -24,7 +25,7 @@ module.exports = {
     async update(data) {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/component";
+                const url = host + "/component";
                 await axios
                     .put(url, data)
                     .then(res => {
@@ -44,7 +45,7 @@ module.exports = {
     async get() {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/component";
+                const url = host + "/component";
                 await axios
                     .get(url)
                     .then(res => {
@@ -64,7 +65,7 @@ module.exports = {
     async delete(id) {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/component/" + id;
+                const url = host + "/component/" + id;
                 await axios
                     .delete(url)
                     .then(res => {

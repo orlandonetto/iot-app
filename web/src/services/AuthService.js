@@ -1,10 +1,11 @@
 const axios = require('axios');
+const {host} = require('../http');
 
 module.exports = {
     async authenticate(data) {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/user/auth";
+                const url = host + "/user/auth";
                 await axios
                     .post(url, data)
                     .then(res => {
@@ -24,7 +25,7 @@ module.exports = {
     async loadSession() {
         return await new Promise(async (resolve, reject) => {
             try {
-                const url = "http://localhost:3000/user/load-session";
+                const url = host + "/user/load-session";
                 await axios
                     .get(url)
                     .then(res => {
