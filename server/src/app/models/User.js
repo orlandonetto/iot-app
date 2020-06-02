@@ -28,7 +28,6 @@ const UserSchema = new Schema({
     components: [{
         type: Schema.Types.ObjectID,
         required: true,
-        unique: true,
         ref: 'Component',
     }]
 }, {versionKey: false});
