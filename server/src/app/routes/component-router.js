@@ -9,8 +9,9 @@ router.delete('/:id', authenticate, controller.delete);
 router.get('/', authenticate, controller.get);
 
 router.get('/digital/:id', identifier, controller.getDigitalData);
-router.post('/digital/:id', identifier, value, controller.setDigitalData);
+router.put('/digital/:id', identifier, value, controller.setDigitalData);
 router.get('/analog/:id', identifier, controller.getAnalogData);
-router.post('/analog/:id', identifier, value, controller.setAnalogData);
+router.put('/analog/:id', identifier, value, controller.setAnalogData);
 
 module.exports = router;
+
