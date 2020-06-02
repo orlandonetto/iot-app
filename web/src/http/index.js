@@ -1,3 +1,3 @@
 module.exports = {
-    host: "http://35.199.120.25:3000"
+    host: "https://blugon.net/api"
 }
