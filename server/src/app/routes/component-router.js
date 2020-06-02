@@ -8,10 +8,10 @@ router.put('/', authenticate, controller.update);
 router.delete('/:id', authenticate, controller.delete);
 router.get('/', authenticate, controller.get);
 
-router.get('/digital/:id', identifier, controller.getDigitalData);
-router.get('/digital/:id', identifier, value, controller.setDigitalData);
-router.get('/analog/:id', identifier, controller.getAnalogData);
-router.get('/analog/:id', identifier, value, controller.setAnalogData);
+router.get('/digital/get;:id', identifier, controller.getDigitalData);
+router.get('/digital/set/:id', identifier, value, controller.setDigitalData);
+router.get('/analog/get/:id', identifier, controller.getAnalogData);
+router.get('/analog/set/:id', identifier, value, controller.setAnalogData);
 
 module.exports = router;
 
