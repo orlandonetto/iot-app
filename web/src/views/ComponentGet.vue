@@ -16,12 +16,12 @@
         </q-dialog>
         <q-btn
                 class="q-mb-sm"
-                color="accent"
+                style="color: #252c39;"
                 icon="add"
                 size="9px"
                 round
                 @click="create">
-            <q-tooltip content-class="bg-accent">Create new Component</q-tooltip>
+            <q-tooltip content-style="color: #252c39;">Create new Component</q-tooltip>
         </q-btn>
         <q-table
                 row-key="id"
@@ -32,22 +32,22 @@
 
             <template slot="body-cell-options" slot-scope="props">
                 <q-btn
+                        style="color: #252c39;"
                         class="q-mt-sm q-mr-sm"
                         icon="delete"
                         @click="confirmDelete(props.row.id)"
-                        color="accent"
                         size="10px"
                         round>
-                    <q-tooltip content-class="bg-accent">Delete Component</q-tooltip>
+                    <q-tooltip content-style="color: #252c39;">Delete Component</q-tooltip>
                 </q-btn>
                 <q-btn
                         class="q-mt-sm q-mr-sm"
+                        style="color: #252c39;"
                         icon="arrow_right_alt"
                         @click="update(null, props.row)"
-                        color="accent"
                         size="10px"
                         round>
-                    <q-tooltip content-class="bg-accent">Visualize Component</q-tooltip>
+                    <q-tooltip content-style="color: #252c39;">Visualize Component</q-tooltip>
                 </q-btn>
             </template>
         </q-table>

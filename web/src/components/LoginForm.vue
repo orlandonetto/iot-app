@@ -4,13 +4,12 @@
         <q-card class="column items-center bg-white q-pa-md" :style="getWidth()">
             <q-card-section class="full-width text-h6 text-center">
                 <q-btn
-                        style="position: absolute; left: 0"
-                        color="accent"
+                        style="position: absolute; left: 0; color: #252c39;"
                         icon="keyboard_arrow_left"
                         size="9px"
                         round
                         @click="back">
-                    <q-tooltip content-class="bg-accent">Back to home</q-tooltip>
+                    <q-tooltip content-style="color: #252c39">Back to home</q-tooltip>
                 </q-btn>
                 Sign in
             </q-card-section>
