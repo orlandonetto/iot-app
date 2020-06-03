@@ -2,7 +2,7 @@
     <div>
         <q-toolbar class="bg-dark">
             <q-toolbar-title class="row">
-                <q-item clickable @click="toMain">
+                <q-item clickable @click="toHome">
                     <q-avatar>
                         <q-img src="https://storage.cloud.google.com/b500/Logo_Blugon.png"/>
                     </q-avatar>
@@ -34,8 +34,8 @@
                 this.$store.dispatch('logout');
                 this.$router.push('/login');
             },
-            toMain() {
-                this.$router.push("/main");
+            toHome() {
+                this.$router.push("/");
             },
             openDocumentation() {
                 window.open('https://documenter.getpostman.com/view/6407543/SztG46o9?version=latest', '_blank');

@@ -108,12 +108,12 @@
                 userService.register(this.user)
                     .then((data) => {
                         const {message} = data;
-                        this.$q.notify(message);
+                        alert(message);
 
                         this.$router.push('/');
                     })
                     .catch(rej => {
-                        this.$q.notify(rej);
+                        alert(rej);
                     })
             },
             getWidth() {
