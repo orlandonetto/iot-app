@@ -35,10 +35,7 @@
                 this.$router.push('/login');
             },
             toHome() {
-                try {
-                    this.$router.push('/');
-                } catch (e) {
-                }
+                this.$router.push('/').then().catch();
             },
             openDocumentation() {
                 window.open('https://documenter.getpostman.com/view/6407543/SztG46o9?version=latest', '_blank');
