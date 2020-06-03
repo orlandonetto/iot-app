@@ -75,15 +75,11 @@ module.exports = {
             }
         });
     },
-    async get({id, userId}) {
+    async get({id}) {
         return await new Promise(async (resolve, reject) => {
             try {
-                const query = {_id: userId}
-                if (id)
-                    query.components._id = id;
-
-                const {components} = await User.findOne(query).populate('components');
-                resolve(_.orderBy(components, 'createdAt', 'desc'));
+                const response = await Component.findOne({_id: id});
+                resolve(response);
             } catch (e) {
                 reject({message: e.message});
             }

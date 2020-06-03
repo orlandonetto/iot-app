@@ -8,6 +8,7 @@ router.put('/', authenticate, controller.update);
 router.delete('/:id', authenticate, controller.delete);
 router.get('/', authenticate, controller.get);
 
+router.get('/get/:id', identifier, controller.getById);
 router.get('/digital/get/:id', identifier, controller.getDigitalData);
 router.put('/digital/set/:id', identifier, value, controller.setDigitalData);
 router.get('/analog/get/:id', identifier, controller.getAnalogData);

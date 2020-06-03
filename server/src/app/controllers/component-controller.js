@@ -22,6 +22,15 @@ module.exports = {
             .catch(error => res.status(400).json(error));
     },
 
+    async getById(req, res) {
+        const request = {
+            id: req.id
+        }
+        await service.getById(request)
+            .then(response => res.status(200).json(response))
+            .catch(error => res.status(400).json(error));
+    },
+
     async getDigitalData(req, res) {
         const request = {
             id: req.id
