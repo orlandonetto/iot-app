@@ -75,7 +75,7 @@ module.exports = {
             }
         });
     },
-    async get({id}) {
+    async getById({id}) {
         return await new Promise(async (resolve, reject) => {
             try {
                 const response = await Component.findOne({_id: id});
