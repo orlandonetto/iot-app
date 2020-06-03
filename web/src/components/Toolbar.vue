@@ -1,6 +1,6 @@
 <template>
     <div>
-        <q-toolbar class="bg-accent">
+        <q-toolbar class="bg-dark">
             <q-toolbar-title class="row">
                 <q-item clickable @click="toMain">
                     <q-avatar>
@@ -17,7 +17,7 @@
                 <q-tooltip content-class="bg-accent">Documentation</q-tooltip>
             </q-btn>
 
-            <q-btn color="dark" round dense icon="exit_to_app" @click="logout">
+            <q-btn class="bg-accent" round dense icon="exit_to_app" @click="logout">
                 <q-tooltip content-class="bg-accent">Sign out</q-tooltip>
             </q-btn>
         </q-toolbar>
