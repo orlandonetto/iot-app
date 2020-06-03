@@ -1,6 +1,10 @@
 <template>
     <q-layout class="bg-primary column justify-center items-center q-pa-md">
 
+        <q-header elevated class="bg-primary text-white" height-hint="98">
+            <Toolbar/>
+        </q-header>
+
         <q-card class="column items-center bg-white q-pa-md" :style="getWidth()">
             <q-card-section class="full-width text-h6 text-center">
                 <q-btn
@@ -35,9 +39,13 @@
 </template>
 
 <script>
+    import Toolbar from "../components/Toolbar";
+
     const componentService = require('../services/ComponentService');
 
     export default {
+        components: {Toolbar},
+
         data() {
             return {
                 name: ''

@@ -82,7 +82,7 @@
                         this.$router.push('/main');
                     })
                     .catch(rej => {
-                        alert(rej)
+                        alert(rej);
                     })
             },
             getWidth() {

@@ -87,7 +87,7 @@
                             return {id: e._id, name: e.name, analogData: e.analogData, digitalData: e.digitalData}
                         });
                     })
-                    .catch(err => alert(err));
+                    .catch(err => console.log(err));
             },
             update(ev, row) {
                 this.$router.push('/component/update?id=' + row.id);

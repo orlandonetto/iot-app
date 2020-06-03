@@ -1,6 +1,10 @@
 <template>
     <q-layout class="bg-primary column justify-center items-center q-pa-md">
 
+        <q-header elevated class="bg-primary text-white" height-hint="98">
+            <Toolbar/>
+        </q-header>
+
         <q-card class="column items-center bg-white q-pa-md" :style="getWidth()">
             <q-card-section class="full-width text-h6 text-center">
                 <q-btn
@@ -16,27 +20,16 @@
             </q-card-section>
             <q-list bordered dense separator>
                 <q-item>
-                    <b>id:</b>
-                    {{id}}
-                </q-item>
-                <q-item class="row items-center">
-                    <b>Status</b>
-                    <q-toggle
-                            v-model="digitalData"
-                            color="green"
-                            keep-color
-                            @input="updateStatus"/>
-                </q-item>
-
-                <q-item class="row items-center">
-                    <b class="q-mr-md">Intensity</b>
-                    <q-slider v-model="analogData" :min="0" :max="100" @change="updateIntensity"/>
+                    <b class="q-pa-sm">id:</b>
+                    <span class="q-pa-sm">{{id}}</span>
                 </q-item>
 
                 <q-item>
                     <q-input
+                            class="q-mt-md"
                             :readonly="!editingName"
                             :borderless="!editingName"
+                            rounded outlined
                             maxlength="30"
                             v-model="name"
                             label="Name"
@@ -51,15 +44,39 @@
                     </q-input>
                 </q-item>
 
+                <q-item class="row items-center">
+                    <b>Status</b>
+                    <q-toggle
+                            v-model="digitalData"
+                            color="green"
+                            keep-color
+                            @input="updateStatus"/>
+                </q-item>
+
+                <q-item class="row items-center">
+                    <b class="q-mr-sm">Intensity</b>
+                    <q-slider
+                            v-model="analogData"
+                            :min="0"
+                            :max="100"
+                            label
+                            @change="updateIntensity"/>
+                    <b class="q-ml-sm">{{analogData}}%</b>
+                </q-item>
+
             </q-list>
         </q-card>
     </q-layout>
 </template>
 
 <script>
+    import Toolbar from "../components/Toolbar";
+
     const componentService = require('../services/ComponentService');
 
     export default {
+        components: {Toolbar},
+
         data() {
             return {
                 interval: null,
