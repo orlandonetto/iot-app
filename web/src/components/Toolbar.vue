@@ -35,6 +35,7 @@
                 this.$router.push('/login');
             },
             toHome() {
+                console.log(this.$router);
                 this.$router.push("/");
             },
             openDocumentation() {
