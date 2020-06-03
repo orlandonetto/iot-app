@@ -5,8 +5,8 @@
                 <q-card-section class="text-h6">Iot Manager</q-card-section>
 
                 <div class="row full-width justify-center text-white">
-                    <q-btn @click="login" class="q-ma-xs" style="color: #252c39;">Login</q-btn>
-                    <q-btn @click="register" class="q-ma-xs" style="color: #252c39;">Register</q-btn>
+                    <q-btn @click="login" class="bg-accent q-ma-xs">Login</q-btn>
+                    <q-btn @click="register" class="bg-accent q-ma-xs">Register</q-btn>
                 </div>
 
             </q-card>
